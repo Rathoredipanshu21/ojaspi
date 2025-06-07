@@ -2,7 +2,7 @@
 
 .container {
   padding: 3rem 2rem; /* Slightly more padding for the white container */
-  background-color: ; /* White background for the container */
+   /* White background for the container */
   border-radius: 15px; /* Match card border-radius for consistency */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for the white container */
   margin-top: 50px; /* Add margin from the top */
