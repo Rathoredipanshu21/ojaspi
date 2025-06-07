@@ -1,0 +1,230 @@
+/* JourneyPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* For titles */
+
+
+:root {
+    --primary-green: #4CAF50;
+    --light-green: #8BC34A;
+    --dark-green: #388E3C;
+    --brown-trunk: #8B4513;
+    --darker-brown: #5A2E0F;
+    --text-dark: #343a40;
+    --background-gradient-start: #f0f0f0;
+    --background-gradient-end: #ffffff;
+    --highlight-line-color: #4CAF50;
+    --purple-flowers: #6A0DAD; /* Mimicking the image's bottom element */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+}
+
+.journey-container {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.journey-main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    text-align: center;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+}
+
+.journey-content {
+    width: 100%;
+    align-items: center; /* Center items vertically in the row */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Left Side: Key Highlights */
+.journey-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.highlight-line {
+    width: 5px;
+    height: 40px;
+    background-color: var(--highlight-line-color);
+    margin-right: 15px;
+    border-radius: 2px;
+    flex-shrink: 0; /* Prevent line from shrinking */
+}
+
+.highlight-item p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* Right Side: Tree Infographic */
+.journey-tree-wrapper {
+    position: relative; /* For absolute positioning of text over SVG */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.journey-tree-svg {
+    width: 100%;
+    height: auto;
+    max-width: 700px; /* Max width for the SVG */
+    display: block;
+    /* Removed drop-shadow here as it's defined inside SVG defs now */
+}
+
+/* Leaf text overlays */
+.leaf-text {
+    position: absolute;
+    color: var(--text-dark);
+    text-align: center;
+    font-weight: 600;
+    pointer-events: none; /* Allow clicks to pass through to SVG if needed */
+    z-index: 1; /* Ensure text is above SVG */
+    background-color: rgba(255, 255, 255, 0.7); /* Slight background for readability */
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.leaf-text h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 5px;
+}
+
+.leaf-text p {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Positioning for each leaf's text overlay relative to the SVG's viewBox */
+/* These values are determined empirically to match the SVG leaf positions */
+.leaf-2016 {
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.leaf-2017 {
+    top: 45%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.leaf-2018 {
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.leaf-2019 {
+    top: 48%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.leaf-2020 {
+    top: 65%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) { /* Medium devices and below */
+    .journey-main-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .journey-highlights {
+        align-items: center; /* Center highlights on smaller screens */
+        text-align: center;
+    }
+
+    .highlight-item {
+        flex-direction: column; /* Stack line and text */
+        margin-bottom: 20px;
+    }
+
+    .highlight-line {
+        width: 40px;
+        height: 4px;
+        margin: 0 0 10px 0; /* Adjust margin for stacking */
+    }
+
+    .highlight-item p {
+        font-size: 1.1rem;
+    }
+
+    .journey-tree-wrapper {
+        margin-top: 40px; /* Add space between highlights and tree on mobile */
+    }
+
+    /* Adjust leaf text positions for better mobile visibility if needed */
+    .leaf-text {
+        padding: 6px 10px;
+    }
+    .leaf-text h4 {
+        font-size: 1.1rem;
+    }
+    .leaf-text p {
+        font-size: 0.85rem;
+    }
+
+    /* More drastic adjustments for very small screens if text overflows leaves */
+    .leaf-2016 { top: 60%; left: 30%; }
+    .leaf-2017 { top: 40%; left: 25%; }
+    .leaf-2018 { top: 25%; left: 45%; }
+    .leaf-2019 { top: 45%; left: 70%; }
+    .leaf-2020 { top: 60%; left: 70%; }
+}
+
+@media (max-width: 575.98px) { /* Extra small devices */
+    .journey-main-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .highlight-item p {
+        font-size: 1rem;
+    }
+
+    /* Further refine leaf text positions if they overlap */
+    .leaf-2016 { top: 60%; left: 30%; }
+    .leaf-2017 { top: 40%; left: 25%; }
+    .leaf-2018 { top: 25%; left: 45%; }
+    .leaf-2019 { top: 45%; left: 70%; }
+    .leaf-2020 { top: 60%; left: 70%; }
+}

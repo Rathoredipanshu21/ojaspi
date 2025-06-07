@@ -1,0 +1,30 @@
+/* Basic styling for sections to show scrollability */
+.section-padding {
+  padding: 80px 0; /* Adjust as needed */
+  min-height: 100vh; /* Make sections take full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Background colors for sections to distinguish them */
+#home {
+  background-color: #f8f9fa; /* Light gray */
+}
+
+#about {
+  background-color: #e9ecef; /* Slightly darker gray */
+}
+
+#services {
+  background-color: #f8f9fa;
+}
+
+#gallery {
+  background-color: #e9ecef;
+}
+
+#contact {
+  background-color: #f8f9fa;
+}

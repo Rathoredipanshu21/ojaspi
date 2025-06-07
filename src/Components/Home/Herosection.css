@@ -1,0 +1,121 @@
+/* Existing styles (no change) */
+.Herosection-wrapper {
+  width: 100%;
+  height: 80vh; /* Default for larger screens */
+  overflow: hidden;
+  position: relative;
+}
+
+.Herosection-slide {
+  width: 100%;
+  height: 80vh; /* Default for larger screens */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Herosection-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 30, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Herosection-content {
+  color: #ffffff;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center; /* Added for better centering on small screens */
+}
+
+.Herosection-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffd700;
+  margin-bottom: 0.5rem; /* Added margin for better spacing */
+}
+
+.Herosection-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #ffffff;
+}
+
+.Herosection-description {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE - General Adjustments */
+@media (max-width: 768px) {
+  .Herosection-title {
+    font-size: 2.2rem;
+  }
+  .Herosection-subtitle {
+    font-size: 1.4rem;
+  }
+  .Herosection-description {
+    font-size: 1rem;
+  }
+
+  /* NEW: Carousel/Hero Section Height and Width Adjustment for Phones */
+  .Herosection-wrapper {
+    height: 40vh; /* Set wrapper height to 40% of viewport height */
+    width: 40%; /* Set wrapper width to 40% of viewport width */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    /* If you had padding-top, remove it if you want the section itself to be 40vh without extra space */
+    /* padding-top: 100px; // Removed as it affects overall height */
+  }
+
+  .Herosection-slide {
+    height: 40vh; /* Set slide height to 40% of viewport height */
+    width: 100%; /* Ensure slide fills the 40% width of its wrapper */
+  }
+
+  /* Optional: Adjust content padding further to fit in the narrower space */
+  .Herosection-content {
+    padding: 10px; /* Reduce padding to fit content better in smaller height and width */
+  }
+}
+
+
+/* Existing animation styles (no change) */
+div.at-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.at-item {
+  color: #3079ed;
+  font-weight: bold;
+  font-size: 3em;
+  animation-name: focus-in-contract;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

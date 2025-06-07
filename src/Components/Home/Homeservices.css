@@ -1,0 +1,85 @@
+
+
+.container {
+  padding: 3rem 2rem; /* Slightly more padding for the white container */
+  background-color: ; /* White background for the container */
+  border-radius: 15px; /* Match card border-radius for consistency */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for the white container */
+  margin-top: 50px; /* Add margin from the top */
+  margin-bottom: 50px; /* Add margin from the bottom */
+}
+
+.section-title {
+  font-size: 2.8rem; /* Increased font size */
+  margin-bottom: 1rem;
+  color: #007bff; /* Heading color */
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.3rem; /* Increased subtitle font */
+  color: #555; /* Darker gray for readability */
+  margin-bottom: 2.5rem; /* More space below subtitle */
+}
+
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 15px;
+  background-color: #2B5262; /* Light gray for contrast */
+  color: #fff; /* Text color */
+  overflow: hidden;
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Lift on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Hover shadow */
+}
+
+.icon {
+  font-size: 3.5rem; /* Icon size */
+  margin-bottom: 1rem;
+  /* Icon color handled via text-* classes */
+}
+
+.service-title {
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.service-description {
+  font-size: 1.15rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .service-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .service-title {
+    font-size: 1.4rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+}

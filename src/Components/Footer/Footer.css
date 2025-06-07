@@ -1,0 +1,219 @@
+/* General Footer Styles */
+.footer {
+  background-color: #232f3e; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  justify-content: space-around; /* Distributes space evenly */
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center the content */
+  gap: 30px; /* Space between columns */
+}
+
+.footer-section {
+  flex: 1; /* Allows sections to grow and shrink */
+  min-width: 250px; /* Minimum width before wrapping */
+  margin-bottom: 20px; /* Space below sections on smaller screens */
+}
+
+.footer-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #f0f0f0; /* Slightly lighter heading color */
+  position: relative; /* For the underline animation */
+  padding-bottom: 5px; /* Space for the underline */
+}
+
+/* Animated Underline for Headings */
+.footer-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px; /* Initial width of the underline */
+  height: 3px;
+  background-color: #ff9900; /* Accent color */
+  transition: width 0.3s ease-in-out; /* Animation for width */
+}
+
+.footer-section h2:hover::after {
+  width: 80px; /* Expand on hover */
+}
+
+
+.footer-section p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #cccccc;
+}
+
+/* Links List Styling */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  display: inline-block; /* Required for transform */
+}
+
+.footer-section ul li a:hover {
+  color: #ff9900; /* Accent color on hover */
+  transform: translateX(5px); /* Slide effect on hover */
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5em;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3a4759; /* Slightly lighter background for icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icons a:hover {
+  background-color: #ff9900; /* Accent color on hover */
+  transform: translateY(-5px) scale(1.1); /* Lift and grow on hover */
+}
+
+/* Contact Info Section */
+.footer-section.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.footer-section.contact-info p i {
+  color: #ff9900; /* Accent color for icons */
+  font-size: 1.1em;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.newsletter-form input[type="email"] {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 0.9em;
+  background-color: #3a4759;
+  color: #ffffff;
+  outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #aaaaaa;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #e68a00; /* Darker accent on hover */
+  transform: scale(1.02);
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+  font-size: 0.85em;
+  color: #cccccc;
+}
+
+/* Responsive Design - Media Queries */
+@media (max-width: 992px) {
+  .footer-content {
+    justify-content: center; /* Center items when they wrap */
+  }
+
+  .footer-section {
+    flex-basis: 45%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    align-items: center; /* Center content when stacked */
+  }
+
+  .footer-section {
+    min-width: unset; /* Remove min-width constraint */
+    width: 90%; /* Take up more width */
+    text-align: center; /* Center text within sections */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center social icons */
+  }
+
+  .newsletter-form {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-section h2 {
+    font-size: 1.3em;
+  }
+
+  .footer-section p,
+  .footer-section ul li a,
+  .newsletter-form input,
+  .newsletter-form button {
+    font-size: 0.85em;
+  }
+
+  .social-icons a {
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+  }
+}
