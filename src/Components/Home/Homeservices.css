@@ -1,57 +1,59 @@
-
-
 .container {
-  padding: 3rem 2rem; /* Slightly more padding for the white container */
-   /* White background for the container */
-  border-radius: 15px; /* Match card border-radius for consistency */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for the white container */
-  margin-top: 50px; /* Add margin from the top */
-  margin-bottom: 50px; /* Add margin from the bottom */
+  padding: 4rem 2rem;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .section-title {
-  font-size: 2.8rem; /* Increased font size */
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: #007bff; /* Heading color */
-  font-weight: 700;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .section-subtitle {
-  font-size: 1.3rem; /* Increased subtitle font */
-  color: #555; /* Darker gray for readability */
-  margin-bottom: 2.5rem; /* More space below subtitle */
+  font-size: 1.4rem;
+  text-align: center;
+  color: #d0d0d0;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card {
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
-              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-radius: 15px;
-  background-color: #2B5262; /* Light gray for contrast */
-  color: #fff; /* Text color */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #294D5C, #223E4B);
+  color: #fff;
   overflow: hidden;
-  border: 1px solid #eee; /* Subtle border */
+  border: none;
 }
 
 .service-card:hover {
-  transform: translateY(-8px); /* Lift on hover */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Hover shadow */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .icon {
-  font-size: 3.5rem; /* Icon size */
-  margin-bottom: 1rem;
-  /* Icon color handled via text-* classes */
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .service-title {
-  font-size: 1.7rem;
-  margin-bottom: 0.75rem;
-  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .service-description {
-  font-size: 1.15rem;
-  color: #666;
+  font-size: 1.1rem;
+  color: #d0d0d0;
   line-height: 1.6;
 }
 
@@ -59,8 +61,8 @@
 @media (max-width: 768px) {
   .container {
     padding: 2rem 1rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .section-title {
@@ -71,8 +73,8 @@
     font-size: 1rem;
   }
 
-  .service-item {
-    margin-bottom: 1.5rem;
+  .service-card {
+    padding: 1.5rem;
   }
 
   .service-title {
@@ -80,6 +82,6 @@
   }
 
   .service-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }

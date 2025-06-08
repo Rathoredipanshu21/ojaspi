@@ -1,25 +1,24 @@
-import React from 'react'
-import Herosection from './Herosection'
-import Homeservices from './Homeservices'
-import Verticals from './Verticals'
-import Progress from './Progress'
-import JourneyPage from './JourneyPage'
-
+import React, { useEffect } from 'react';
+import Herosection from './Herosection';
+import Homeservices from './Homeservices';
+import Progress from './Progress';
+import JourneyPage from './JourneyPage';
+import HomeSection from './HomeSection';
 
 const MainHome = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
-
-    <Herosection/>
-    <Homeservices/>
-    {/* <Verticals/> */}
-    <Progress/>
-    <JourneyPage/>
-   
-    
-    
+      <Herosection />
+      <Homeservices />
+      <Progress />
+      <JourneyPage />
+      <HomeSection/>
     </>
-  )
-}
+  );
+};
 
-export default MainHome
+export default MainHome;

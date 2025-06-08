@@ -1,253 +1,263 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <>
-      <style>
-        {`
-          /* ALL your previous styles pasted here unchanged for brevity */
-          .footer {
-            background-color: #0C152C;
-            color: #ffffff;
-            padding: 40px 20px;
-            font-family: 'Inter', sans-serif;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
-            line-height: 1.6;
-            border-radius: 8px;
-            overflow: hidden;
-          }
+    <footer className="text-white pt-5 pb-4 footer-bg">
+      <div className="container text-center text-md-start">
+        <div className="row text-center text-md-start g-4">
 
-          .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1280px;
-            margin: 0 auto;
-            gap: 30px;
-          }
-
-          .footer-section {
-            flex: 1;
-            min-width: 280px;
-            margin-bottom: 20px;
-            padding: 0 10px;
-          }
-
-          .footer-section h2 {
-            font-size: 1.6em;
-            margin-bottom: 25px;
-            color: #E0E0E0;
-            position: relative;
-            padding-bottom: 8px;
-            letter-spacing: 0.5px;
-          }
-
-          .footer-section h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 4px;
-            background-color: #FFD700;
-            border-radius: 2px;
-            transition: width 0.4s ease-in-out;
-          }
-
-          .footer-section h2:hover::after {
-            width: 100px;
-          }
-
-          .footer-section p {
-            font-size: 0.98em;
-            color: #B0B0B0;
-            margin-bottom: 15px;
-          }
-
-          .footer-section ul {
-            list-style: none;
-            padding: 0;
-          }
-
-          .footer-section ul li {
-            margin-bottom: 12px;
-          }
-
-          .footer-section ul li a {
-            color: #B0B0B0;
-            text-decoration: none;
-            font-size: 0.98em;
-            transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
-            display: inline-block;
-            padding-left: 5px;
-          }
-
-          .footer-section ul li a:hover {
-            color: #FFD700;
-            transform: translateX(8px);
-            letter-spacing: 0.8px;
-          }
-
-          .social-icons {
-            margin-top: 25px;
-            display: flex;
-            gap: 20px;
-          }
-
-          .social-icons a {
-            color: #ffffff;
-            font-size: 1.6em;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-          }
-
-          .social-icons a:hover {
-            background-color: #FFD700;
-            transform: translateY(-7px) scale(1.15);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-          }
-
-          .footer-section.contact-info p {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-          }
-
-          .footer-section.contact-info p i {
-            color: #FFD700;
-            font-size: 1.25em;
-            padding-top: 2px;
-          }
-
-          .newsletter-form {
-            display: flex;
-            margin-top: 25px;
-            width: 100%;
-            max-width: 350px;
-          }
-
-          .newsletter-form input[type="email"] {
-            flex-grow: 1;
-            padding: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px 0 0 8px;
-            font-size: 0.95em;
-            background-color: rgba(255, 255, 255, 0.08);
-            color: #ffffff;
-            outline: none;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-          }
-
-          .newsletter-form input[type="email"]::placeholder {
-            color: #A0A0A0;
-          }
-
-          .newsletter-form button {
-            padding: 14px 22px;
-            background-color: #FFD700;
-            color: #0C152C;
-            border: none;
-            border-radius: 0 8px 8px 0;
-            cursor: pointer;
-            font-size: 0.95em;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            text-transform: uppercase;
-          }
-
-          .newsletter-form button:hover {
-            background-color: #E6C200;
-            transform: scale(1.02);
-            box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
-          }
-
-          .footer-bottom {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
-            font-size: 0.88em;
-            color: #A0A0A0;
-          }
-        `}
-      </style>
-
-      <footer className="footer">
-        <div className="footer-content">
-          {/* About Section */}
-          <div className="footer-section about">
-            <h2>About Us</h2>
-            <p>
-              We are a leading provider of innovative solutions, committed to
-              delivering excellence and exceeding expectations in the digital landscape.
+          {/* Brand Info & Social Links */}
+          <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 className="text-uppercase mb-4 font-weight-bold text-gradient-warning-footer">
+              OJASPI
+            </h5>
+            <p className="footer-description">
+              We deliver a full suite of services including HR, customer verification, web solutions, and digital marketing tailored to meet business goals.
             </p>
-            <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
+            <div className="d-flex justify-content-center justify-content-md-start gap-3 social-icons mt-4">
+              <a href="https://www.facebook.com/profile.php?id=61576385294921" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="footer-social-icon"><FaFacebookF /></a>
+              <a href="https://www.youtube.com/channel/UCRNwiIlyHffyEt6rk8sqrQQ" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="footer-social-icon"><FaTwitter /></a>
+              <a href="https://www.instagram.com/ojaspiservices/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social-icon"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/ojas-pi-51a294368/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social-icon"><FaLinkedinIn /></a>
             </div>
           </div>
 
+          {/* Services Links */}
+          <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 className="text-uppercase mb-4 font-weight-bold text-gradient-warning-footer">
+              Services
+            </h5>
+            <ul className="list-unstyled footer-links">
+              <li><Link to="/retention-cpe">Retention & CPE</Link></li>
+              <li><Link to="/customer-verification">Customer Verification</Link></li>
+              <li><Link to="/financial-services">Financial Services</Link></li>
+              <li><Link to="/hr-services">HR Services</Link></li>
+              <li><Link to="/web-development">Web Development</Link></li>
+              <li><Link to="/digital-marketing">Digital Marketing</Link></li>
+              <li><Link to="/services">All Services</Link></li>
+            </ul>
+          </div>
+
           {/* Quick Links */}
-          <div className="footer-section links">
-            <h2>Quick Links</h2>
-            <ul>
-              <li><a href="/services">Our Services</a></li>
-              <li><a href="/portfolio">Our Portfolio</a></li>
-              <li><a href="/team">Meet The Team</a></li>
-              <li><a href="/careers">Careers</a></li>
-              <li><a href="/blog">Our Blog</a></li>
+          <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 className="text-uppercase mb-4 font-weight-bold text-gradient-warning-footer">
+              Quick Links
+            </h5>
+            <ul className="list-unstyled footer-links">
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/career">Career</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/faq">FAQ</Link></li>
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service">Terms of Service</Link></li>
             </ul>
           </div>
 
-          {/* Support Links */}
-          <div className="footer-section support">
-            <h2>Support</h2>
-            <ul>
-              <li><a href="/faq">FAQ</a></li>
-              <li><a href="/help-center">Help Center</a></li>
-              <li><a href="/terms">Terms of Service</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/site-map">Site Map</a></li>
-            </ul>
-          </div>
+          {/* Contact Info & Newsletter */}
+          <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 className="text-uppercase mb-4 font-weight-bold text-gradient-warning-footer">
+              Contact & Newsletter
+            </h5>
+            <p className="contact-info-item">
+              <FaMapMarkerAlt className="me-2 footer-icon" /> Delhi, India
+            </p>
+            <p className="contact-info-item">
+              <FaEnvelope className="me-2 footer-icon" /> info@ojaspi.com
+            </p>
+            <p className="contact-info-item">
+              <FaPhoneAlt className="me-2 footer-icon" /> +91 98765 43210
+            </p>
 
-          {/* Contact Info */}
-          <div className="footer-section contact-info">
-            <h2>Contact Info</h2>
-            <p><i className="fas fa-map-marker-alt"></i> 123 Digital Avenue, Tech City, State 12345, India</p>
-            <p><i className="fas fa-phone"></i> +91 987 654 3210</p>
-            <p><i className="fas fa-envelope"></i> contact@innovativesolutions.com</p>
-            <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="Enter your email for updates" required />
-              <button type="submit">Subscribe</button>
-            </form>
+            <h6 className="text-white mt-4 mb-3">Stay Updated!</h6>
+            <div className="input-group mb-3 newsletter-input-group">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Your Email"
+                aria-label="Your Email"
+                aria-describedby="button-addon2"
+                style={{ backgroundColor: '#28506C', borderColor: '#28506C', color: '#fff' }}
+              />
+              <button className="btn btn-outline-warning newsletter-btn" type="button" id="button-addon2">
+                <FaPaperPlane />
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Innovative Solutions. All rights reserved.</p>
+        <hr className="my-4 footer-divider" />
+
+        {/* Footer Bottom - Copyright */}
+        <div className="row align-items-center">
+          <div className="col-12 text-center">
+            <p className="mb-0 copyright-text">
+              © {new Date().getFullYear()} OJASPI. All Rights Reserved.
+            </p>
+          </div>
         </div>
-      </footer>
-    </>
+      </div>
+
+      {/* Custom Styles */}
+      <style jsx>{`
+        .footer-bg {
+          background-color: #0C152C; /* Updated Dark Blue-Green */
+          border-top: 5px solid #28506C;
+          box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.4);
+          font-family: 'Arial', sans-serif;
+        }
+
+        .text-gradient-warning-footer {
+          color: #FFD700;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          position: relative;
+          display: inline-block;
+          padding-bottom: 5px;
+        }
+        .text-gradient-warning-footer::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, #FFD700, #FFA500);
+          border-radius: 2px;
+        }
+
+        .footer-description {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.85);
+        }
+
+        .social-icons a {
+          color: #fff;
+          font-size: 1.4rem;
+          transition: transform 0.3s ease, color 0.3s ease;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          width: 38px;
+          height: 38px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .social-icons a:hover {
+          color: #FFD700;
+          transform: translateY(-3px) scale(1.1);
+          border-color: #FFD700;
+          box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .footer-links li {
+          margin-bottom: 8px;
+        }
+        .footer-links a {
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color 0.3s ease, transform 0.2s ease;
+          position: relative;
+          padding-left: 15px;
+        }
+        .footer-links a::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: #FFD700;
+          font-size: 1.1em;
+          line-height: 1;
+        }
+        .footer-links a:hover {
+          color: #FFD700;
+          transform: translateX(5px);
+        }
+
+        .contact-info-item {
+          font-size: 0.95rem;
+          color: rgba(255, 255, 255, 0.9);
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+        }
+        .footer-icon {
+          color: #FFD700;
+          font-size: 1.1rem;
+        }
+
+        .newsletter-input-group .form-control {
+          border-top-left-radius: 0.5rem;
+          border-bottom-left-radius: 0.5rem;
+        }
+        .newsletter-btn {
+          border-top-right-radius: 0.5rem !important;
+          border-bottom-right-radius: 0.5rem !important;
+          background-color: #FFD700;
+          color: #1C3B4A;
+          border-color: #FFD700;
+          transition: all 0.3s ease;
+        }
+        .newsletter-btn:hover {
+          background-color: #FFA500 !important;
+          border-color: #FFA500 !important;
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .footer-divider {
+          border-color: rgba(255, 255, 255, 0.15);
+          margin-top: 3rem;
+          margin-bottom: 2rem;
+        }
+
+        .copyright-text {
+          font-size: 0.85rem;
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 767.98px) {
+          .text-md-start {
+            text-align: center !important;
+          }
+          .justify-content-md-start {
+            justify-content: center !important;
+          }
+          .footer-links li {
+            text-align: center;
+          }
+          .footer-links a {
+            padding-left: 0;
+          }
+          .footer-links a::before {
+            display: none;
+          }
+          .contact-info-item {
+            justify-content: center;
+          }
+          .newsletter-input-group {
+            width: 90%;
+            margin: 0 auto;
+          }
+          .newsletter-input-group .form-control,
+          .newsletter-btn {
+            border-radius: 0.5rem !important;
+          }
+        }
+      `}</style>
+    </footer>
   );
 };
 

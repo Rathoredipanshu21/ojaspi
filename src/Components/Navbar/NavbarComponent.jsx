@@ -83,8 +83,8 @@ const NavbarComponent = () => {
                     </NavLink>
                   </li>
                   <li onClick={toggleDrawer}>
-                    <NavLink to="/gallery" activeClassName="active">
-                      Gallery
+                    <NavLink to="/career" activeClassName="active">
+                      Careers
                     </NavLink>
                   </li>
                   <li onClick={toggleDrawer}>
@@ -113,8 +113,8 @@ const NavbarComponent = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/gallery" activeClassName="active">
-                  Gallery
+                <NavLink to="/career" activeClassName="active">
+                  Careers
                 </NavLink>
               </li>
               <li>
