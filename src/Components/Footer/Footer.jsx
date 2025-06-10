@@ -29,7 +29,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/profile.php?id=61576385294921" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="footer-social-icon"><FaFacebookF /></a>
               <a href="https://www.youtube.com/channel/UCRNwiIlyHffyEt6rk8sqrQQ" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="footer-social-icon"><FaTwitter /></a>
               <a href="https://www.instagram.com/ojaspiservices/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social-icon"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/in/ojas-pi-51a294368/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social-icon"><FaLinkedinIn /></a>
+              <a href="https://x.com/OJASPISERVICES" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="footer-social-icon"><FaLinkedinIn /></a>
             </div>
           </div>
 

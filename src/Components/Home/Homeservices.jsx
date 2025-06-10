@@ -15,13 +15,16 @@ import './Homeservices.css';
 import { Link } from 'react-router-dom';
 
 const services = [
-  {
-    icon: <FaBoxOpen className="icon text-warning" />,
-    title: 'Retention & CPE Recovery',
-    description: 'Asset recovery of customer premise equipment with proper tracking.',
-    animation: 'flip-left',
-    path: '/retention-cpe',
-  },
+ {
+  icon: <FaBoxOpen className="icon text-warning" />,
+  title: 'Equipment Recovery',
+  description: 'Asset recovery of customer premise equipment with proper tracking.',
+  animation: 'flip-left',
+  path: '/retention-cpe',
+}
+
+
+,
   {
     icon: <FaUserCheck className="icon text-success" />,
     title: 'Customer Verification',

@@ -124,7 +124,10 @@ const Herosection = () => {
             Whether it's automating workflows, visualizing data, or building intelligent interfaces,
             we make it seamless and effective.
           </p>
-          <button className="know-more-btn">Know More</button>
+          <button className="know-more-btn"><a href="/services" className="know-more-btn" style={{ textDecoration: 'none', color: 'white' }}>
+  Know More
+</a>
+</button>
         </div>
 
         <div className="section-image" data-aos="fade-left">

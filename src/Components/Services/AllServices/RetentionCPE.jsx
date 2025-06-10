@@ -9,11 +9,9 @@ const RetentionCPE = () => {
   const [expandedService, setExpandedService] = useState(null);
 
   useEffect(() => {
-    // Initialize AOS for animations
     AOS.init({ duration: 1000, once: true });
-    // Scroll to the top of the page when the component mounts
     window.scrollTo(0, 0);
-  }, []); // Empty dependency array ensures this runs once on mount
+  }, []);
 
   const toggleService = (serviceName) => {
     setExpandedService(expandedService === serviceName ? null : serviceName);
@@ -23,26 +21,26 @@ const RetentionCPE = () => {
     {
       name: 'Asset Recovery',
       icon: <FaBox size={40} style={{ color: '#FFD700' }} />,
-      description: 'Secure recovery of routers, modems & more post-service termination.',
-      details: 'Our field teams retrieve customer devices with real-time verification and secure tracking, ensuring minimal loss and quick return to warehouse.'
+      description: 'Secure collection of equipment after service termination.',
+      details: 'Our field teams retrieve devices with real-time verification and secure tracking, ensuring minimal loss and quick return to the warehouse.'
     },
     {
       name: 'Logistics & Tracking',
       icon: <FaTruck size={40} style={{ color: '#03CB58' }} />,
-      description: 'Live GPS and RFID system to track every device door-to-door.',
-      details: 'Every device collected is logged, barcoded, and tracked throughout the journey with updates to the central portal and client dashboard.'
+      description: 'Live GPS and RFID system to track every device end-to-end.',
+      details: 'Every recovered unit is logged, barcoded, and tracked throughout the journey with continuous updates to the central portal and client dashboard.'
     },
     {
       name: 'Refurbishment & QA',
       icon: <FaTools size={40} style={{ color: '#03CB58' }} />,
-      description: 'Deep diagnostics, repairs, cleaning & grading for reuse.',
-      details: 'Recovered CPEs are professionally tested, cleaned, firmware updated, and passed through multi-level QA before redeployment or inventory placement.'
+      description: 'Testing, cleaning & grading for reuse or redeployment.',
+      details: 'Recovered equipment is inspected, cleaned, firmware updated, and passed through multiple QA checks before returning to inventory.'
     },
     {
       name: 'Sustainable Process',
       icon: <FaRecycle size={40} style={{ color: '#FFD700' }} />,
-      description: 'Eco-friendly practices & certified e-waste disposal.',
-      details: 'Non-repairable devices are sent to certified e-waste recyclers. Reports and compliance documentation are shared with clients monthly.'
+      description: 'Eco-friendly workflows & certified e-waste disposal.',
+      details: 'Non-reusable items are sent to certified recyclers. Monthly reports and compliance certificates are provided for sustainability records.'
     }
   ];
 
@@ -53,10 +51,10 @@ const RetentionCPE = () => {
       fontFamily: 'Segoe UI',
     },
     hero: {
-      padding: '0px 20px 60px', // Removed top padding as discussed
-      minHeight: '100vh', // Optionally, make hero full height for a more impactful initial view
+      padding: '0px 20px 60px',
+      minHeight: '100vh',
       display: 'flex',
-      alignItems: 'center', // Vertically center content within the hero if minHeight is used
+      alignItems: 'center',
     },
     heroFlex: {
       display: 'flex',
@@ -102,14 +100,14 @@ const RetentionCPE = () => {
         <div style={styles.heroFlex}>
           <div style={styles.heroText}>
             <h1 className="display-5 fw-bold" style={{ color: '#FFD700' }}>
-              Retention & CPE Recovery
+              Equipment Recovery
             </h1>
             <p className="lead mt-3" style={{ color: '#f8f9fa' }}>
-              Maximizing asset lifecycle with modern tracking, refurbishment, and responsible recovery.
+              Maximizing hardware lifecycle with modern tracking, refurbishment, and responsible collection processes.
             </p>
           </div>
           <div style={styles.heroImageWrapper}>
-            <img src={cpe} alt="CPE Gear" style={styles.gearImage} />
+            <img src={cpe} alt="Recovery Process" style={styles.gearImage} />
           </div>
         </div>
       </section>
@@ -120,7 +118,7 @@ const RetentionCPE = () => {
           <div className="row justify-content-center">
             <div className="col-md-10 text-center">
               <p className="fs-5" style={{ lineHeight: '1.8', color: '#dee2e6' }}>
-                We offer end-to-end CPE recovery services to reduce capital expenditure, extend hardware lifecycle, and ensure sustainable practices with real-time tracking and certified logistics workflows.
+                We offer end-to-end equipment recovery services to reduce capital expenditure, extend device lifecycle, and ensure sustainable practices with real-time tracking and certified logistics workflows.
               </p>
             </div>
           </div>

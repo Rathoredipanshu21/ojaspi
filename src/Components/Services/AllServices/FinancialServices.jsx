@@ -1,5 +1,3 @@
-// ✅ FinancialServices.jsx — AOS Fixed + Unique Hero + Responsive Layout
-
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,32 +23,32 @@ const FinancialServices = () => {
     {
       icon: <FaMoneyCheckAlt className="text-warning mb-3" size={40} />,
       title: 'Debt Recovery (B2B & B2C)',
-      desc: 'End-to-end recovery management system with legal escalation, field visits and automated reminders.'
+      desc: 'Our robust debt recovery system provides end-to-end management for both ongoing invoices and overdue debtors. We utilize a multi-pronged approach, including automated reminders, strategic field visits, and legal escalation when necessary, all designed to maximize recovery rates efficiently. We specialize in identifying and fixing collection inefficiencies within your organization, transforming your accounts receivable into a healthy revenue stream.'
     },
     {
       icon: <FaHandHoldingUsd className="text-success mb-3" size={40} />,
       title: 'Loan Verification Services',
-      desc: 'KYC document scrutiny and background financial analysis for secured and unsecured loans.'
+      desc: 'Ensure the integrity of your loan portfolio with our meticulous loan verification services. We conduct thorough KYC document scrutiny and in-depth background financial analysis for both secured and unsecured loans. Our rigorous process helps you mitigate risk, prevent fraud, and make informed lending decisions, safeguarding your assets and maintaining compliance.'
     },
     {
       icon: <FaUniversity className="text-warning mb-3" size={40} />,
-      title: 'Banking Compliance',
-      desc: 'Documentation compliance and adherence tracking for RBI/SEBI/NBFC policies.'
+      title: 'Banking & Financial Compliance',
+      desc: 'Navigate the complex regulatory landscape of India with confidence. We offer comprehensive documentation compliance and adherence tracking for policies set by the Reserve Bank of India (RBI), Securities and Exchange Board of India (SEBI), and Non-Banking Financial Companies (NBFCs). Our proactive compliance solutions minimize risk, avoid penalties, and ensure your operations are always aligned with the latest legal frameworks.'
     },
     {
       icon: <FaHandshake className="text-success mb-3" size={40} />,
       title: 'B2B Collections',
-      desc: 'White-labelled collection solutions with dispute resolution and settlement workflows.'
+      desc: 'Streamline your business-to-business collections with our white-labeled solutions. We integrate seamlessly with your existing processes, offering expert dispute resolution and efficient settlement workflows. Our approach preserves client relationships while effectively recovering outstanding dues, enhancing your cash flow and operational stability.'
     },
     {
       icon: <FaPiggyBank className="text-warning mb-3" size={40} />,
       title: 'Non-Banking Finance Services',
-      desc: 'We serve NBFCs with custom collection, assessment, and risk evaluation modules.'
+      desc: 'We provide specialized support for Non-Banking Financial Companies (NBFCs) with custom-tailored solutions for collections, borrower assessment, and risk evaluation modules. Our services are designed to address the unique challenges and opportunities within the NBFC sector, helping you optimize operations, manage portfolios effectively, and drive sustainable growth.'
     },
     {
       icon: <FaChartLine className="text-success mb-3" size={40} />,
       title: 'Credit Scoring Integration',
-      desc: 'Integrate with CIBIL, Experian or CRIF to automate borrower credibility analysis.'
+      desc: 'Empower your lending decisions with automated borrower credibility analysis. We facilitate seamless integration with major credit bureaus like CIBIL, Experian, and CRIF. This allows for real-time access to comprehensive credit reports and scores, enabling faster, more accurate risk assessments and enhancing the efficiency of your loan origination process.'
     },
   ];
 
@@ -63,7 +61,7 @@ const FinancialServices = () => {
             <div className="col-md-7 text-center text-md-start">
               <h1 className="fw-bold display-5 text-warning mb-3">Empowering Finance & Recovery</h1>
               <p className="lead text-light mb-4">
-                Tailored services for Banking, NBFCs, and FinTech — from debt recovery to real-time credit scoring.
+                Tailored services for Banking, NBFCs, and FinTech — from comprehensive debt recovery to real-time credit scoring and meticulous compliance. We help you secure your financial operations and accelerate growth.
               </p>
               <a
                 href="/contact"
@@ -90,9 +88,9 @@ const FinancialServices = () => {
                 key={item.title}
                 data-aos={i % 2 === 0 ? 'fade-right' : 'fade-left'}
               >
-                <div className="p-4 rounded-4 shadow bg-dark h-100 text-center">
+                <div className="p-4 rounded-4 shadow bg-dark h-100 text-center d-flex flex-column justify-content-between">
                   {item.icon}
-                  <h5 className="fw-bold text-white">{item.title}</h5>
+                  <h5 className="fw-bold text-white mb-2">{item.title}</h5>
                   <p className="text-light fs-6 mt-2" style={{ lineHeight: '1.7' }}>{item.desc}</p>
                 </div>
               </div>
@@ -106,7 +104,7 @@ const FinancialServices = () => {
         <div className="container">
           <h2 className="fw-bold text-warning mb-3">Secure. Scalable. Smart.</h2>
           <p className="text-light mx-auto mb-4" style={{ maxWidth: '650px' }}>
-            Designed for regulatory-grade stability and intelligent automation — trusted by 50+ institutions across India.
+            Our financial solutions are designed for **regulatory-grade stability** and **intelligent automation** — trusted by over 50 leading institutions across India. We provide the tools you need to operate securely and efficiently.
           </p>
         </div>
       </section>
@@ -116,7 +114,7 @@ const FinancialServices = () => {
         <div className="container">
           <h2 className="fw-bold text-warning mb-4">Industries We Serve</h2>
           <p className="fs-6 text-light mb-0">
-            FinTech • Microfinance • Insurance • Co-operative Banks • NBFCs • Credit Agencies
+            **FinTech** • **Microfinance** • **Insurance** • **Co-operative Banks** • **NBFCs** • **Credit Agencies**
           </p>
         </div>
       </section>

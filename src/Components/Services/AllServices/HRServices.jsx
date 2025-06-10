@@ -31,7 +31,7 @@ const HrServices = () => {
     },
     {
       icon: <FaUsers size={40} className="text-success mb-3" />,
-      title: 'Contractual & Permanent Staffing',
+      title: 'Staffing',
       desc: 'We provide flexible and scalable staffing models, offering both contractual and permanent placements tailored specifically for sectors like IT, BPO, Retail, Manufacturing, and MSMEs. All candidates undergo rigorous background verification and skill assessments, ensuring you receive qualified and reliable professionals while maintaining complete compliance with labor laws and industry regulations.'
     },
     {
@@ -40,19 +40,21 @@ const HrServices = () => {
       desc: 'Our comprehensive payroll management services automate your entire payroll process, from accurate salary computation and tax deductions (TDS) to timely PF/ESIC contributions, professional payslip generation, and seamless bank transfers. We ensure compliance with all statutory regulations, reducing administrative burden and minimizing errors for your organization.'
     },
     {
-      icon: <FaMoneyCheckAlt size={40} className="text-success mb-3" />,
-      title: 'Compensation & Benefits Structuring',
-      desc: 'We design customized compensation and benefits strategies that are directly aligned with your business\'s performance KPIs, organizational hierarchy, and industry benchmarks. This includes crafting competitive salary structures, incentive programs, and employee welfare schemes to attract, motivate, and retain your most valuable assets while ensuring full compliance with relevant regulations.'
-    },
-    {
-      icon: <FaFileSignature size={40} className="text-warning mb-3" />,
+      icon: <FaFileSignature size={40} className="text-success mb-3" />,
       title: 'Statutory Compliance',
       desc: 'Navigating India\'s complex labor laws can be challenging. We guarantee full adherence to all critical statutory compliances, including EPFO, ESIC, Minimum Wages Act, Payment of Gratuity Act, Shops and Establishments Act, and other applicable local and national labor laws across all states. Our proactive approach helps you mitigate risks and avoid penalties.'
     },
     {
-      icon: <FaUserCheck size={40} className="text-success mb-3" />,
+      icon: <FaUserCheck size={40} className="text-warning mb-3" />,
       title: 'Background Verification (BGV)',
       desc: 'Our robust background verification services are essential for secure hiring. We conduct comprehensive checks, including criminal record checks, detailed educational qualifications verification, previous employment history validation, and social identity screening. This thorough process provides you with confidence in your hiring decisions for all levels of employees.'
+    },
+    // The following features were in your original code but not in your new content,
+    // so I've kept them to maintain the original structure.
+    {
+      icon: <FaMoneyCheckAlt size={40} className="text-success mb-3" />,
+      title: 'Compensation & Benefits Structuring',
+      desc: 'We design customized compensation and benefits strategies that are directly aligned with your business\'s performance KPIs, organizational hierarchy, and industry benchmarks. This includes crafting competitive salary structures, incentive programs, and employee welfare schemes to attract, motivate, and retain your most valuable assets while ensuring full compliance with relevant regulations.'
     },
     {
       icon: <FaAddressCard size={40} className="text-warning mb-3" />,
@@ -93,8 +95,6 @@ const HrServices = () => {
         </div>
       </section>
 
-   
-
       {/* Services Overview Section */}
       <section className="py-5">
         <div className="container">
@@ -116,8 +116,6 @@ const HrServices = () => {
           </div>
         </div>
       </section>
-
-   
 
       {/* Deep Dive into Recruitment Services */}
       <section className="py-5" style={{ backgroundColor: '#1C3B4A' }}>
@@ -142,8 +140,6 @@ const HrServices = () => {
         </div>
       </section>
 
-   
-
       {/* Deep Dive into Payroll Services */}
       <section className="py-5">
         <div className="container">
@@ -166,8 +162,6 @@ const HrServices = () => {
           </div>
         </div>
       </section>
-
-   
 
       {/* Deep Dive into Statutory Compliance */}
       <section className="py-5" style={{ backgroundColor: '#1C3B4A' }}>
@@ -192,8 +186,6 @@ const HrServices = () => {
           </div>
         </div>
       </section>
-
-   
 
       {/* Why Choose Us Section */}
       <section className="py-5">
@@ -237,8 +229,6 @@ const HrServices = () => {
         </div>
       </section>
 
-   
-
       {/* Trusted by Companies */}
       <section className="py-5 bg-black text-center" data-aos="fade-up" data-aos-easing="ease-in-out">
         <div className="container">
@@ -248,8 +238,6 @@ const HrServices = () => {
           </p>
         </div>
       </section>
-
-   
 
       {/* Call to Action Footer Strip */}
       <section className="py-5 text-center" data-aos="zoom-in" data-aos-delay="100">
